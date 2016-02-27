@@ -45,15 +45,13 @@
     NSLog(@"Got notified: %@ - %@", notif.name,[[notif userInfo] objectForKey:@"loopCount"]);
 }
 
-- (void)MyNotif3:(NSNotification*)notif {
-    NSLog(@"Got notified: %@", notif.name);
-}
-
 //ノーティフィケーションを設定
 - (void)setUpNotification{
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(MyNotif1:) name:@"MyNotif1" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(MyNotif2:) name:@"MyNotif2" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(MyNotif3:) name:@"MyNotif3" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserverForName:@"MyNotif3" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif){
+        NSLog(@"Got notified: %@", notif.name);
+    }];
 }
 
 @end
