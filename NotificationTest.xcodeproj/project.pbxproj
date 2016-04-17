@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B99EEB1D1CC350AE007A7BB0 /* NotifPoster.m in Sources */ = {isa = PBXBuildFile; fileRef = B99EEB1C1CC350AE007A7BB0 /* NotifPoster.m */; };
 		B9E76DD61C80318A001C8971 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E76DD51C80318A001C8971 /* AppDelegate.m */; };
 		B9E76DD91C80318A001C8971 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E76DD81C80318A001C8971 /* main.m */; };
 		B9E76DDB1C80318A001C8971 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9E76DDA1C80318A001C8971 /* Assets.xcassets */; };
@@ -14,6 +15,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B99EEB1B1CC350AE007A7BB0 /* NotifPoster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifPoster.h; sourceTree = "<group>"; };
+		B99EEB1C1CC350AE007A7BB0 /* NotifPoster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifPoster.m; sourceTree = "<group>"; };
 		B9E76DD11C803189001C8971 /* NotificationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotificationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E76DD41C80318A001C8971 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B9E76DD51C80318A001C8971 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -55,6 +58,8 @@
 			children = (
 				B9E76DD41C80318A001C8971 /* AppDelegate.h */,
 				B9E76DD51C80318A001C8971 /* AppDelegate.m */,
+				B99EEB1B1CC350AE007A7BB0 /* NotifPoster.h */,
+				B99EEB1C1CC350AE007A7BB0 /* NotifPoster.m */,
 				B9E76DDA1C80318A001C8971 /* Assets.xcassets */,
 				B9E76DDC1C80318A001C8971 /* MainMenu.xib */,
 				B9E76DDF1C80318A001C8971 /* Info.plist */,
@@ -142,6 +147,7 @@
 			files = (
 				B9E76DD91C80318A001C8971 /* main.m in Sources */,
 				B9E76DD61C80318A001C8971 /* AppDelegate.m in Sources */,
+				B99EEB1D1CC350AE007A7BB0 /* NotifPoster.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +287,7 @@
 				B9E76DE41C80318A001C8971 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -45,11 +45,19 @@
     NSLog(@"Got notified: %@ - %@", notif.name,[[notif userInfo] objectForKey:@"loopCount"]);
 }
 
+- (IBAction)pshFromOtherClass:(id)sender {
+    _notifPoster = [[NotifPoster alloc]init];
+    [_notifPoster postNotif]; 
+}
+
 //ノーティフィケーションを設定
 - (void)setUpNotification{
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(MyNotif1:) name:@"MyNotif1" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(MyNotif2:) name:@"MyNotif2" object:nil];
     [[NSNotificationCenter defaultCenter] addObserverForName:@"MyNotif3" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif){
+        NSLog(@"Got notified: %@", notif.name);
+    }];
+    [[NSNotificationCenter defaultCenter] addObserverForName:@"MyNotif4" object:_notifPoster queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif){
         NSLog(@"Got notified: %@", notif.name);
     }];
 }
