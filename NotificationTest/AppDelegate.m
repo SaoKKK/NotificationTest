@@ -14,6 +14,7 @@
 @end
 
 @implementation AppDelegate
+@synthesize notifPoster;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     [self setUpNotification];
@@ -46,8 +47,8 @@
 }
 
 - (IBAction)pshFromOtherClass:(id)sender {
-    _notifPoster = [[NotifPoster alloc]init];
-    [_notifPoster postNotif]; 
+    notifPoster = [[NotifPoster alloc]init];
+    [notifPoster postNotif];
 }
 
 //ノーティフィケーションを設定
@@ -57,7 +58,7 @@
     [[NSNotificationCenter defaultCenter] addObserverForName:@"MyNotif3" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif){
         NSLog(@"Got notified: %@", notif.name);
     }];
-    [[NSNotificationCenter defaultCenter] addObserverForName:@"MyNotif4" object:_notifPoster queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif){
+    [[NSNotificationCenter defaultCenter] addObserverForName:@"MyNotif4" object:notifPoster queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif){
         NSLog(@"Got notified: %@", notif.name);
     }];
 }
